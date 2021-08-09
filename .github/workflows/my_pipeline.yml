@@ -3,13 +3,7 @@
 name: myPipeline
 
 # Controls when the workflow will run
-on:
-  commit_comment:
-    branches: [ main ]
-
-
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+on: [ commit_comment ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
