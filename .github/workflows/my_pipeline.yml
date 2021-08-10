@@ -29,3 +29,9 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+
+      - name: deploy
+        run: |
+          zip -j hello.zip ./hello.py
+          aws lambda update-function-code --function-name=hello_world --zip-file=fileb://hello.zip
+
